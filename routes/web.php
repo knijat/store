@@ -33,6 +33,7 @@ Route::group(['middleware'=>'auth'],function(){
     Route::get('/admin/dashboard','AdminGetController@dashboard');
     Route::get('/admin/addproduct','AdminGetController@addproduct');
     Route::post('/admin/addproduct','AdminPostController@addproduct');
+    Route::get('/admin/products','AdminGetController@showProduct');
     Route::post('/admin/addcategory','AdminPostController@addcategory');
 });
 

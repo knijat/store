@@ -188,6 +188,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="/admin/products" class="nav-link">
+                            <i class="nav-icon far fa-circle text-warning"></i>
+                            <p>Products</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{ url('/logout') }}" class="nav-link"
                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -211,6 +217,7 @@
 {{--content--}}
 @yield('addproduct')
 @yield('dashboard')
+@yield('products')
 
 <!-- jQuery -->
     <script src="/back/plugins/jquery/jquery.min.js"></script>
@@ -246,6 +253,11 @@
     <script src="/back/dist/js/pages/dashboard.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="/back/dist/js/demo.js"></script>
+    <!-- DataTables -->
+    <script src="/back/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="/back/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+
+
     @yield('js')
 </body>
 </html>

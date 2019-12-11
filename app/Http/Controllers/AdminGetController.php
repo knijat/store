@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\product;
 use Illuminate\Support\Facades\File;
 
 use App\category;
@@ -29,6 +30,12 @@ class AdminGetController extends Controller{
 
         return view('back.dashboard');
 
+    }
+
+    public function showProduct(){
+
+        $products=Product::all();
+        return view('back.products')->with(['products'=>$products]);
     }
 
     public function addproduct()
